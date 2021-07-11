@@ -48,14 +48,6 @@ VALUES("Meow!", 1, 2),
 	  ("Amazing Shot!", 3, 2),
 	  ("I <3 This!", 2, 1);
 
-# likes table creation
-CREATE TABLE likes
-(user_id INT NOT NULL,
-photo_id INT NOT NULL,
-created_at TIMESTAMP DEFAULT NOW(),
-FOREIGN KEY (user_id) REFERENCES users(id),
-FOREIGN KEY (photo_id) REFERENCES photos(id));
-
 # Insert some data on comments table
 INSERT INTO comments(comment_text, user_id, photo_id)
 VALUES("Meow!", 1, 2),
